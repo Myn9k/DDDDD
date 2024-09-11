@@ -1,0 +1,21 @@
+{% extends 'main/Shablon.html' %}
+{% load static %}
+
+{% block title %}Фотогалерея{% endblock %}
+
+{% block cssFile %}
+        <link href="{% static 'main/css/PhotoGalery.css' %}" rel="stylesheet">
+ {% endblock %}
+
+{% block content %}
+<banertext>Фотогалерея</banertext>
+<main>
+    <photos>
+        <div class="container">
+            {% for foto in model_info %}
+            <img src="{{ foto.picture.url }}" alt="Photo"/>
+            {% endfor %}
+        </div>
+    </photos>
+</main>
+{% endblock %}

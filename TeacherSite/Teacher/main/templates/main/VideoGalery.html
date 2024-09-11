@@ -1,0 +1,35 @@
+{% extends 'main/Shablon.html' %}
+{% load static %}
+
+{% block title %}Видеогалерея{% endblock %}
+
+{% block cssFile %}
+        <link href="{% static 'main/css/VideoGalery.css' %}" rel="stylesheet">
+ {% endblock %}
+
+{% block content %}
+<banertext>Видеогалерея</banertext>
+<main>
+    {% for video in model_info %}
+    <viideos>
+        <div class="container">
+            <div class="content">
+                <div class="text-content">
+                    <strong>
+                        {{ video.name }}
+                    </strong>
+                    <p>
+                        {{ video.text }}
+                    </p>
+                </div>
+                <div class="video">
+                    <video id="my-video" class="video-js" controls preload="auto" width="420" height="340" data-setup="{}">
+                        <source src="{{ video.file.url }}">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </viideos>
+    {% endfor %}
+</main>
+{% endblock %}

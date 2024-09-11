@@ -1,0 +1,26 @@
+{% extends 'main/Shablon.html' %}
+{% load static %}
+
+{% block title %}Личностные достижения{% endblock %}
+
+{% block cssFile %}
+        <link href="{% static 'main/css/Achievement.css' %}" rel="stylesheet">
+ {% endblock %}
+
+{% block content %}
+<banertext>Личностные достижения</banertext>
+<main>
+    <photos>
+        <div class="container">
+            {% for year, achievements in achievements_by_year.items %}
+                <h2>{{ year }}</h2>
+                <div class="achievements">
+                    {% for achievement in achievements %}
+                        <img src="{{ achievement.picture.url }}" alt="Achievement Image">
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </photos>
+</main>
+{% endblock %}

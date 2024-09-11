@@ -1,0 +1,32 @@
+main {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: white;
+}
+photos {
+    color: #000;
+}
+
+photos img{
+    max-height: 40%;
+    max-width: 40%;
+    margin: 10px;
+}
+
+banertext {
+    margin-top: 50px;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 15px;
+    font-size: 26px;
+}
+
+

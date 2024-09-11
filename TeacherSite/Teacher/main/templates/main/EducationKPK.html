@@ -1,0 +1,33 @@
+{% extends 'main/Shablon.html' %}
+{% load static %}
+
+{% block title %}Образование и КПК{% endblock %}
+
+{% block cssFile %}
+        <link href="{% static 'main/css/EducationKPK.css' %}" rel="stylesheet">
+ {% endblock %}
+
+{% block content %}
+<banertext>Образование и КПК</banertext>
+<main>
+    {% for foto in model_info %}
+    <images>
+        <div class="container">
+            <div class="content">
+                <div class="text-content">
+                    <strong>
+                        {{ foto.name }}
+                    </strong>
+                    <p>
+                        {{ foto.text }}
+                    </p>
+                </div>
+                <div class="imgs">
+                    <img src="{{ foto.picture.url }}" width="400" height="365" alt="Photo"/>
+                </div>
+            </div>
+        </div>
+    </images>
+    {% endfor %}
+</main>
+{% endblock %}

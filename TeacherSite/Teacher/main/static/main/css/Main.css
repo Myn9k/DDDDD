@@ -1,0 +1,138 @@
+
+
+
+main {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    }
+
+
+main h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-shadow: black 2px 3px 4px;
+}
+
+main h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+main h3 {
+    font-size: 1.5em;
+}
+
+maininfo {
+    margin-top: 350px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 50px;
+}
+
+maininfo strong {
+    color: blue;
+}
+
+maininfo h4 {
+    color: black;
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text-content {
+    width: 65%;
+    margin-right: 20px;
+}
+
+.intro, .bio, .quote, .resource-goal {
+    margin-bottom: 20px;
+}
+
+.intro p, .bio p, .quote p, .resource-goal p {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.quote {
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
+    image-rendering: auto;
+    margin-top: 50px;
+}
+
+
+
+mainCard {
+    margin-top: 100px;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+}
+
+.card-text {
+  position: relative;
+  bottom: 30px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  text-shadow: black 2px 3px 4px;
+}
+
+.card .view-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card-text {
+  bottom: 50px;
+}
+
+.card:hover .view-button {
+  opacity: 1;
+}
